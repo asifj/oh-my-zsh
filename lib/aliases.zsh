@@ -48,5 +48,9 @@ alias ett='mate app config lib db public spec test Rakefile Capfile Todo &'
 alias etp='mate app config lib db public spec test vendor/plugins vendor/gems Rakefile Capfile Todo &'
 alias etts='mate app config lib db public script spec test vendor/plugins vendor/gems Rakefile Capfile Todo &'
 
+
 # Editor Ruby file in TextMate
 alias mr='mate CHANGELOG app config db lib public script spec test'
+
+alias ralias="source ~/.oh-my-zsh/lib/aliases.zsh"
+alias ealias="$EDITOR ~/.oh-my-zsh/lib/aliases.zsh && ralias"
