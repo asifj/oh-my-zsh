@@ -54,3 +54,5 @@ alias mr='mate CHANGELOG app config db lib public script spec test'
 
 alias ralias="source ~/.oh-my-zsh/lib/aliases.zsh"
 alias ealias="$EDITOR ~/.oh-my-zsh/lib/aliases.zsh && ralias"
+
+alias rzsh="source ~/.zshrc"
