@@ -72,3 +72,6 @@ alias ralias="source ~/.oh-my-zsh/lib/aliases.zsh"
 alias ealias="$EDITOR ~/.oh-my-zsh/lib/aliases.zsh && ralias"
 
 alias rzsh="source ~/.zshrc"
+
+# Macvim alias
+alias mvim="/Applications/MacVim.app/Contents/MacOS/Vim -g"

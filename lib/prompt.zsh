@@ -1,6 +1,6 @@
 export PAGER=less
 export LC_CTYPE=en_US.UTF-8
-export EDITOR=vi
+export EDITOR=vim
 
 # speed stuff.
 
