@@ -75,3 +75,7 @@ open_lighthouse_ticket () {
 }
 
 alias lho='open_lighthouse_ticket'
+
+grsync () {
+	rsync --verbose --recursive --append --copy-links --human-readable --progress --bwlimit=$1 $2 .
+}
