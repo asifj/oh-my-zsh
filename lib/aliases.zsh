@@ -27,8 +27,10 @@ alias _='sudo'
 # Git related
 alias g='git'
 alias gst='git status'
-alias gl='git pull'
-alias gup='git fetch && git rebase'
+alias gco='git checkout'
+alias gpu='git pull'
+alias gup='git pull --rebase'
+alias gf='git fetch'
 alias gp='git push'
 alias gd='git diff | mate'
 alias gdv='git diff -w "$@" | vim -R -'
@@ -49,7 +51,10 @@ alias l='ls -la'
 alias ll='ls -alr'
 alias sl=ls # often screw this up
 
+# Gem aliases
 alias sgem='sudo gem'
+alias gs='gem search'
+alias gsr='gem search -r'
 
 # Find ruby file
 alias rfind='find . -name *.rb | xargs grep -n'
@@ -75,3 +80,9 @@ alias rzsh="source ~/.zshrc"
 
 # Macvim alias
 alias mvim="/Applications/MacVim.app/Contents/MacOS/Vim -g"
+
+# Bundler aliases
+alias bi="bundle install"
+alias bir="bundle install --relock"
+alias bx="bundle exec"
+alias bp="bundle package"
