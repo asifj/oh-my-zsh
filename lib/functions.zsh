@@ -76,6 +76,11 @@ open_lighthouse_ticket () {
 
 alias lho='open_lighthouse_ticket'
 
-grsync () {
-	rsync --verbose --recursive --append --copy-links --human-readable --progress --bwlimit=$1 $2 .
+function grsync {
+  rsync --verbose --recursive --append --copy-links --human-readable --progress --bwlimit=$1 $2 .
+}
+
+function runrar {
+  # if [ $1 ]; then pattern=$1; else pattern=**/*.rar; fi
+  for f (**/*.rar) { unrar e $f }
 }
