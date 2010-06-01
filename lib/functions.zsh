@@ -84,3 +84,9 @@ function runrar {
   # if [ $1 ]; then pattern=$1; else pattern=**/*.rar; fi
   for f (**/*.rar) { unrar e $f }
 }
+
+function catalog {
+  catalog_path=$1
+  catalog_name=$catalog_path[(ws:/:)-1]
+  tree -D -h $catalog_path > "$catalog_name.txt"
+}
