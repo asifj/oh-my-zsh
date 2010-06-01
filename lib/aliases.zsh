@@ -22,10 +22,11 @@ alias -- -='cd -'
 # Super user
 alias _='sudo'
 
-#alias g='grep -in'
+# grep & ack fu
+alias g='grep -in'
+alias a='ack -i'
 
 # Git related
-alias g='git'
 alias gst='git status'
 alias gco='git checkout'
 alias gpu='git pull'
