@@ -13,6 +13,7 @@ alias rdbm='rake db:migrate'
 alias sc='ruby script/console'
 alias sd='ruby script/server --debugger'
 alias devlog='tail -f log/development.log'
+alias rmodapp='rails application ./ -OTJs -m'
 
 # Basic directory operations
 alias .='pwd'
@@ -56,6 +57,7 @@ alias sl=ls # often screw this up
 alias sgem='sudo gem'
 alias gs='gem search'
 alias gsr='gem search -r'
+alias gsrp='gem search -r --pre'
 
 # Find ruby file
 alias rfind='find . -name *.rb | xargs grep -n'
@@ -79,11 +81,8 @@ alias ealias="$EDITOR ~/.oh-my-zsh/lib/aliases.zsh && ralias"
 
 alias rzsh="source ~/.zshrc"
 
-# Macvim alias
-alias mvim="/Applications/MacVim.app/Contents/MacOS/Vim -g"
-
 # Bundler aliases
 alias bi="bundle install"
-alias bir="bundle install --relock"
+alias bu="bundle update"
 alias bx="bundle exec"
 alias bp="bundle package"
