@@ -90,3 +90,23 @@ function catalog {
   catalog_name=$catalog_path[(ws:/:)-1]
   tree -D -h $catalog_path > "$catalog_name.txt"
 }
+
+function whitespace {
+  find . -name '*.rb' -exec sed -i '' 's/ *$//g' {} \;
+}
+
+function mongo_reload {
+  echo "Started..."
+  mongo_version=$(brew info mongo | head -1 | cut -d' ' -f 2)
+  mongo_lock=/usr/local/var/mongodb/mongod.lock
+
+  # if [ ps aux | grep [m]ongo ]; then
+  #   echo "Stopping mongo"
+  #   launchctl unload -w $HOME/Library/LaunchAgents/org.mongodb.mongod.plist
+  # fi
+  # if [ -f $mongo_lock ]; then
+  #   rm $mongo_lock
+  # fi
+  # mongod run --repair --config /usr/local/Cellar/mongodb/$mongo_version/mongod.conf
+  # launchctl load -w $HOME/Library/LaunchAgents/org.mongodb.mongod.plist
+}
