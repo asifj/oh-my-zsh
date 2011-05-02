@@ -4,14 +4,21 @@
 alias pu='pushd'
 alias po='popd'
 
-alias ss='thin --stats "/thin/stats" start'
-alias sg='ruby script/generate'
-alias sd='ruby script/destroy'
-alias sp='ruby script/plugin'
-alias ssp='ruby script/spec'
+# OS X specific
+alias pbc='pbcopy'
+alias pbp='pbpaste'
+
+alias rs='unicorn_rails'
+alias rsd='rails server'
+alias rg='rails generate'
+alias rd='rails destroy'
+alias rp='rails plugin'
+alias ras='rake spec'
+alias rdd='rake db:drop'
+alias rdc='rake db:create'
+alias rdtc='rake db:test:clone'
 alias rdbm='rake db:migrate'
-alias sc='ruby script/console'
-alias sd='ruby script/server --debugger'
+alias rc='rails console'
 alias devlog='tail -f log/development.log'
 alias rmodapp='rails application ./ -OTJs -m'
 
@@ -40,9 +47,11 @@ alias gc='git commit -v'
 alias gca='git commit -v -a'
 alias gb='git branch'
 alias gba='git branch -a'
-alias gdb='git branch -d'
+alias gbd='git branch -d'
 alias gcount='git shortlog -sn --no-merges'
 alias gcp='git cherry-pick'
+alias gsi='git submodule init'
+alias gsu='git submodule update'
 
 # Show history
 alias history='fc -l 1'
@@ -59,6 +68,12 @@ alias gs='gem search'
 alias gsr='gem search -r'
 alias gsrp='gem search -r --pre'
 
+# Bundler aliases
+alias bi="bundle install"
+alias bu="bundle update"
+alias bx="bundle exec"
+alias bp="bundle package"
+
 # Find ruby file
 alias rfind='find . -name *.rb | xargs grep -n'
 alias afind='ack-grep -il'
@@ -66,23 +81,16 @@ alias afind='ack-grep -il'
 # Git and svn mix
 alias git-svn-dcommit-push='git svn dcommit && git push github master:svntrunk'
 
-# TextMate
-alias et='mate . &'
-alias ett='mate app config lib db public spec test Rakefile Capfile Todo &'
-alias etp='mate app config lib db public spec test vendor/plugins vendor/gems Rakefile Capfile Todo &'
-alias etts='mate app config lib db public script spec test vendor/plugins vendor/gems Rakefile Capfile Todo &'
-
-
-# Editor Ruby file in TextMate
-alias mr='mate CHANGELOG app config db lib public script spec test'
-
+# ZSH
 alias ralias="source ~/.oh-my-zsh/lib/aliases.zsh"
 alias ealias="$EDITOR ~/.oh-my-zsh/lib/aliases.zsh && ralias"
-
 alias rzsh="source ~/.zshrc"
 
-# Bundler aliases
-alias bi="bundle install"
-alias bu="bundle update"
-alias bx="bundle exec"
-alias bp="bundle package"
+# MacVim
+alias M='mvim'
+
+# tmux
+alias T='tmux'
+
+# cucumber
+alias C='CUCUMBER_FORMAT=pretty bx cucumber -r features'
