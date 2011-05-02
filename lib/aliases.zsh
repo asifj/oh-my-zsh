@@ -1,5 +1,3 @@
-#!/bin/zsh
-
 # Push and pop directories on directory stack
 alias pu='pushd'
 alias po='popd'
@@ -23,7 +21,6 @@ alias devlog='tail -f log/development.log'
 alias rmodapp='rails application ./ -OTJs -m'
 
 # Basic directory operations
-alias .='pwd'
 alias ...='cd ../..'
 alias -- -='cd -'
 
@@ -33,6 +30,7 @@ alias _='sudo'
 # grep & ack fu
 alias g='grep -in'
 alias a='ack -i'
+alias afind='ack-grep -il'
 
 # Git related
 alias gst='git status'
@@ -59,7 +57,7 @@ alias history='fc -l 1'
 # List direcory contents
 alias lsa='ls -lah'
 alias l='ls -la'
-alias ll='ls -alr'
+alias ll='ls -l'
 alias sl=ls # often screw this up
 
 # Gem aliases
@@ -94,3 +92,5 @@ alias T='tmux'
 
 # cucumber
 alias C='CUCUMBER_FORMAT=pretty bx cucumber -r features'
+
+alias x=extract
