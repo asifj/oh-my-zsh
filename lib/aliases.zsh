@@ -22,15 +22,13 @@ alias rmodapp='rails application ./ -OTJs -m'
 
 # Basic directory operations
 alias ...='cd ../..'
-alias -- -='cd -'
 
 # Super user
-alias _='sudo'
+alias bitch,='sudo'
 
 # grep & ack fu
 alias g='grep -in'
 alias a='ack -i'
-alias afind='ack-grep -il'
 
 # Git related
 alias gst='git status'
@@ -39,8 +37,7 @@ alias gpu='git pull'
 alias gup='git pull --rebase'
 alias gf='git fetch'
 alias gp='git push'
-alias gd='git diff | mate'
-alias gdv='git diff -w "$@" | vim -R -'
+alias gd='git diff -w "$@" | $EDITOR -R -'
 alias gc='git commit -v'
 alias gca='git commit -v -a'
 alias gb='git branch'
@@ -61,7 +58,6 @@ alias ll='ls -l'
 alias sl=ls # often screw this up
 
 # Gem aliases
-alias sgem='sudo gem'
 alias gs='gem search'
 alias gsr='gem search -r'
 alias gsrp='gem search -r --pre'
@@ -71,13 +67,6 @@ alias bi="bundle install"
 alias bu="bundle update"
 alias bx="bundle exec"
 alias bp="bundle package"
-
-# Find ruby file
-alias rfind='find . -name *.rb | xargs grep -n'
-alias afind='ack-grep -il'
-
-# Git and svn mix
-alias git-svn-dcommit-push='git svn dcommit && git push github master:svntrunk'
 
 # ZSH
 alias ralias="source ~/.oh-my-zsh/lib/aliases.zsh"
@@ -90,7 +79,10 @@ alias M='mvim'
 # tmux
 alias T='tmux'
 
-# cucumber
+# cucumber & rspec
 alias C='CUCUMBER_FORMAT=pretty bx cucumber -r features'
+alias R='bx rspec'
 
-alias x=extract
+alias x='extract'
+
+alias shasum256='openssl dgst -sha256'
