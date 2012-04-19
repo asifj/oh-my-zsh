@@ -53,8 +53,9 @@ compdef _git ta=tig
 alias git-svn-dcommit-push='git svn dcommit && git push github master:svntrunk'
 compdef git-svn-dcommit-push=git
 
-alias gsr='git svn rebase'
-alias gsd='git svn dcommit'
+# No SVN business on my watch!
+#alias gsr='git svn rebase'
+#alias gsd='git svn dcommit'
 #
 # Will return the current branch name
 # Usage example: git pull origin $(current_branch)
