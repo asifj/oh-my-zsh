@@ -46,7 +46,7 @@ alias gsu='git submodule update'
 compdef _git gsu=git-submodule
 alias gss='git submodule sync'
 compdef _git gss=git-submodule
-aliat ta='tig --all'
+alias ta='tig --all'
 compdef _git ta=tig
 
 # Git and svn mix
