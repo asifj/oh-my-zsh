@@ -27,3 +27,13 @@ function catalog {
   catalog_name=$catalog_path[(ws:/:)-1]
   tree -D -h $catalog_path > "$catalog_name.txt"
 }
+
+vm_poweroff() {
+  local _name="$1"
+  VBoxManage controlvm "$_name" poweroff
+}
+
+vm_delete() {
+  local _name="$1"
+  VBoxManage unregistervm "$_name" --delete
+}
