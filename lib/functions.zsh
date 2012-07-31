@@ -16,7 +16,10 @@ function take() {
 }
 
 function grsync {
-  rsync --verbose --recursive --append --copy-links --human-readable --progress --bwlimit=$1 $2 .
+  local _kb="${1:-0}"
+  local _from="${2:-.}"
+  local _to=$3
+  rsync --verbose --recursive --append --copy-links --human-readable --progress --bwlimit="$_kb" "$_from" "$_to"
 }
 
 function catalog {
