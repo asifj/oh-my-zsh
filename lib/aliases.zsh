@@ -22,7 +22,6 @@ alias l='ls -la'
 alias ll='ls -l'
 
 # Gem aliases
-alias gs='gem search'
 alias gsr='gem search -r'
 alias gsrp='gem search -r --pre'
 

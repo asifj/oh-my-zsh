@@ -11,6 +11,8 @@ alias gup='git fetch && git rebase'
 compdef _git gup=git-fetch
 alias gp='git push'
 compdef _git gp=git-push
+alias gpt='git push --tags'
+compdef _git gp=git-push
 gpn() {
   local _remote="${1:-origin}"
   git push --set-upstream "$_remote" "$(current_branch)"
@@ -22,6 +24,8 @@ alias gc='git commit -v'
 compdef _git gc=git-commit
 alias gca='git commit -v -a'
 compdef _git gca=git-commit
+alias gcam='git commit --amend'
+compdef _git gcam=git-commit
 alias gco='git checkout'
 compdef _git gco=git-checkout
 alias gn='git checkout -b'
@@ -47,6 +51,8 @@ alias gm='git merge'
 compdef _git gm=git-merge
 alias grh='git reset HEAD'
 alias grhh='git reset HEAD --hard'
+alias gs='git submodule'
+compdef _git gs=git-submodule
 alias gsi='git submodule init'
 compdef _git gsi=git-submodule
 alias gsu='git submodule update'
