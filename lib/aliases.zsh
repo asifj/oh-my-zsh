@@ -45,3 +45,4 @@ alias T='tmux'
 # misc
 alias x='extract'
 alias shasum256='openssl dgst -sha256'
+alias m='morning-pages'
